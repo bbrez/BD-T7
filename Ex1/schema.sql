@@ -1,11 +1,14 @@
 CREATE SCHEMA IF NOT EXISTS TrabBD7;
+USE TrabBD7;
 
+DROP TABLE IF EXISTS Cliente;
 CREATE TABLE IF NOT EXISTS Cliente (
     `codCliente` INT NOT NULL AUTO_INCREMENT,
     `nomeCliente` VARCHAR(45),
     PRIMARY KEY (`codCliente`)
 );
 
+DROP TABLE IF EXISTS Produto;
 CREATE TABLE IF NOT EXISTS Produto (
     `codPro` INT NOT NULL AUTO_INCREMENT,
     `nomePro` VARCHAR(45),
@@ -14,6 +17,7 @@ CREATE TABLE IF NOT EXISTS Produto (
     PRIMARY KEY (`codPro`)
 );
 
+DROP TABLE IF EXISTS ItemCompra;
 CREATE TABLE IF NOT EXISTS ItemCompra (
     `nroCompra` INT NOT NULL AUTO_INCREMENT,
     `codPro` INT NOT NULL,
@@ -23,6 +27,7 @@ CREATE TABLE IF NOT EXISTS ItemCompra (
     FOREIGN KEY (`codPro`) REFERENCES `Produto`(`codPro`)
 );
 
+DROP TABLE IF EXISTS ItemVenda;
 CREATE TABLE IF NOT EXISTS ItemVenda (
     `nroVenda` INT NOT NULL AUTO_INCREMENT,
     `codPro` INT NOT NULL,
@@ -32,6 +37,7 @@ CREATE TABLE IF NOT EXISTS ItemVenda (
     FOREIGN KEY (`codPro`) REFERENCES `Produto`(`codPro`)
 );
 
+DROP TABLE IF EXISTS NotaVenda;
 CREATE TABLE IF NOT EXISTS NotaVenda (
     `nroVenda` INT NOT NULL,
     `codCliente` INT NOT NULL,
