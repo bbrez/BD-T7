@@ -1,4 +1,4 @@
-USE TrabBD7;
+USE TrabBD7_Ex1;
 
 -- A) Liste o nome de todos os produtos cadastrados
 SELECT nomePro from Produto;
