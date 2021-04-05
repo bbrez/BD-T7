@@ -25,3 +25,6 @@ SELECT codPro FROM Produto;
 -- F) Liste o nome de todos os clientes cadastrados
 
 SELECT nomeCliente FROM Cliente;
+
+-- Produto Cartesiano
+SELECT * FROM notaVenda, Cliente;

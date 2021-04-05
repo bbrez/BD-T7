@@ -1,29 +1,94 @@
 -- Cliente
-USE TrabBD7;
-INSERT INTO cliente (codCliente, nomeCliente) VALUES (1, 'Leonardo');
-INSERT INTO cliente (codCliente, nomeCliente) VALUES (2, 'Bruno');
-INSERT INTO cliente (codCliente, nomeCliente) VALUES (3, 'João');
-INSERT INTO cliente (codCliente, nomeCliente) VALUES (4, 'Carlos');
-INSERT INTO cliente (codCliente, nomeCliente) VALUES (5, 'Roberto');
+START TRANSACTION;
+
+USE TrabBD7_Ex1;
+INSERT INTO Cliente (codCliente, nomeCliente) VALUES (1, 'Leonardo');
+INSERT INTO Cliente (codCliente, nomeCliente) VALUES (2, 'Bruno');
+INSERT INTO Cliente (codCliente, nomeCliente) VALUES (3, 'João');
+INSERT INTO Cliente (codCliente, nomeCliente) VALUES (4, 'Carlos');
+INSERT INTO Cliente (codCliente, nomeCliente) VALUES (5, 'Roberto');
+
+COMMIT;
 
 -- Produto
-USE TrabBD7;
-INSERT INTO produto (codPro, nomePro, precoVenda, precoCusto) VALUES (1, 'Arroz', 7.99, 5.99);
-INSERT INTO produto (codPro, nomePro, precoVenda, precoCusto) VALUES (2, 'Feijão', 6.89, 4.99);
-INSERT INTO produto (codPro, nomePro, precoVenda, precoCusto) VALUES (3, 'Picanha', 124.99, 99.99);
-INSERT INTO produto (codPro, nomePro, precoVenda, precoCusto) VALUES (4, 'Vinho Caro', 21.59, 16.59);
-INSERT INTO produto (codPro, nomePro, precoVenda, precoCusto) VALUES (5, 'Vinho Barato', 109.99, 98.79);
-INSERT INTO produto (codPro, nomePro, precoVenda, precoCusto) VALUES (6, 'Macarrão', 3.99, 1.99);
-INSERT INTO produto (codPro, nomePro, precoVenda, precoCusto) VALUES (7, 'Sal', 4.99, 2.99);
-INSERT INTO produto (codPro, nomePro, precoVenda, precoCusto) VALUES (8, 'Alho', 6.99, 3.99);
-INSERT INTO produto (codPro, nomePro, precoVenda, precoCusto) VALUES (9, 'Azeite de Oliva', 25.99, 20.99);
-INSERT INTO produto (codPro, nomePro, precoVenda, precoCusto) VALUES (10, 'Samsung Galaxy 21 Ultra', 6520.1, 5500);
+START TRANSACTION;
+
+USE TrabBD7_Ex1;
+INSERT INTO Produto (codPro, nomePro, precoVenda, precoCusto) VALUES (1, 'Arroz', 7.99, 5.99);
+INSERT INTO Produto (codPro, nomePro, precoVenda, precoCusto) VALUES (2, 'Feijão', 6.89, 4.99);
+INSERT INTO Produto (codPro, nomePro, precoVenda, precoCusto) VALUES (3, 'Picanha', 124.99, 99.99);
+INSERT INTO Produto (codPro, nomePro, precoVenda, precoCusto) VALUES (4, 'Vinho Caro', 21.59, 16.59);
+INSERT INTO Produto (codPro, nomePro, precoVenda, precoCusto) VALUES (5, 'Vinho Barato', 109.99, 98.79);
+INSERT INTO Produto (codPro, nomePro, precoVenda, precoCusto) VALUES (6, 'Macarrão', 3.99, 1.99);
+INSERT INTO Produto (codPro, nomePro, precoVenda, precoCusto) VALUES (7, 'Sal', 4.99, 2.99);
+INSERT INTO Produto (codPro, nomePro, precoVenda, precoCusto) VALUES (8, 'Alho', 6.99, 3.99);
+INSERT INTO Produto (codPro, nomePro, precoVenda, precoCusto) VALUES (9, 'Azeite de Oliva', 25.99, 20.99);
+INSERT INTO Produto (codPro, nomePro, precoVenda, precoCusto) VALUES (10, 'Samsung Galaxy 21 Ultra', 6520.1, 5500);
+
+COMMIT;
 
 -- ItemCompra
-USE TrabBD7;
+START TRANSACTION;
+
+USE TrabBD7_Ex1;
+INSERT INTO `ItemCompra` (`nroCompra`, `qtdeCompra`, `valorCompra`, `Produto_codPro`) VALUES (1, 2000, 9980, 2);
+INSERT INTO `ItemCompra` (`nroCompra`, `qtdeCompra`, `valorCompra`, `Produto_codPro`) VALUES (2, 5000, 14950, 7);
+INSERT INTO `ItemCompra` (`nroCompra`, `qtdeCompra`, `valorCompra`, `Produto_codPro`) VALUES (3, 2000, 11980, 1);
+INSERT INTO `ItemCompra` (`nroCompra`, `qtdeCompra`, `valorCompra`, `Produto_codPro`) VALUES (4, 100, 550000, 10);
+INSERT INTO `ItemCompra` (`nroCompra`, `qtdeCompra`, `valorCompra`, `Produto_codPro`) VALUES (5, 200, 19998, 3);
+INSERT INTO `ItemCompra` (`nroCompra`, `qtdeCompra`, `valorCompra`, `Produto_codPro`) VALUES (6, 3000, 5970, 6);
+INSERT INTO `ItemCompra` (`nroCompra`, `qtdeCompra`, `valorCompra`, `Produto_codPro`) VALUES (7, 500, 49395, 5);
+INSERT INTO `ItemCompra` (`nroCompra`, `qtdeCompra`, `valorCompra`, `Produto_codPro`) VALUES (8, 1000, 3990, 8);
+INSERT INTO `ItemCompra` (`nroCompra`, `qtdeCompra`, `valorCompra`, `Produto_codPro`) VALUES (9, 600, 12594, 9);
+INSERT INTO `ItemCompra` (`nroCompra`, `qtdeCompra`, `valorCompra`, `Produto_codPro`) VALUES (10, 1000, 16590, 4);
+INSERT INTO `ItemCompra` (`nroCompra`, `qtdeCompra`, `valorCompra`, `Produto_codPro`) VALUES (11, 1000, 5990, 1);
+INSERT INTO `ItemCompra` (`nroCompra`, `qtdeCompra`, `valorCompra`, `Produto_codPro`) VALUES (12, 1000, 4990, 2);
+INSERT INTO `ItemCompra` (`nroCompra`, `qtdeCompra`, `valorCompra`, `Produto_codPro`) VALUES (13, 1000, 1990, 6);
+INSERT INTO `ItemCompra` (`nroCompra`, `qtdeCompra`, `valorCompra`, `Produto_codPro`) VALUES (14, 1000, 2990, 7);
+INSERT INTO `ItemCompra` (`nroCompra`, `qtdeCompra`, `valorCompra`, `Produto_codPro`) VALUES (15, 1000, 3990, 8);
+COMMIT;
 
 -- ItemVenda
-USE TrabBD7;
+START TRANSACTION;
+
+USE TrabBD7_Ex1;
+INSERT INTO `ItemVenda` (`quantidadeVenda`, `valorVenda`, `Produto_codPro`) VALUES (5, 39.95, 1);
+INSERT INTO `ItemVenda` (`quantidadeVenda`, `valorVenda`, `Produto_codPro`) VALUES (2, 13.78, 2);
+INSERT INTO `ItemVenda` (`quantidadeVenda`, `valorVenda`, `Produto_codPro`) VALUES (1, 124.99, 3);
+INSERT INTO `ItemVenda` (`quantidadeVenda`, `valorVenda`, `Produto_codPro`) VALUES (8, 172.72, 4);
+INSERT INTO `ItemVenda` (`quantidadeVenda`, `valorVenda`, `Produto_codPro`) VALUES (2, 219.98, 5);
+INSERT INTO `ItemVenda` (`quantidadeVenda`, `valorVenda`, `Produto_codPro`) VALUES (5, 19.95, 6);
+INSERT INTO `ItemVenda` (`quantidadeVenda`, `valorVenda`, `Produto_codPro`) VALUES (10, 49.90, 7);
+INSERT INTO `ItemVenda` (`quantidadeVenda`, `valorVenda`, `Produto_codPro`) VALUES (2, 13.98, 8);
+INSERT INTO `ItemVenda` (`quantidadeVenda`, `valorVenda`, `Produto_codPro`) VALUES (1, 25.99, 9);
+INSERT INTO `ItemVenda` (`quantidadeVenda`, `valorVenda`, `Produto_codPro`) VALUES (1, 5500, 10);
+INSERT INTO `ItemVenda` (`quantidadeVenda`, `valorVenda`, `Produto_codPro`) VALUES (7, 55.93, 1);
+INSERT INTO `ItemVenda` (`quantidadeVenda`, `valorVenda`, `Produto_codPro`) VALUES (3, 20.67, 2);
+INSERT INTO `ItemVenda` (`quantidadeVenda`, `valorVenda`, `Produto_codPro`) VALUES (1, 124.99, 3);
+INSERT INTO `ItemVenda` (`quantidadeVenda`, `valorVenda`, `Produto_codPro`) VALUES (20, 431.8, 4);
+INSERT INTO `ItemVenda` (`quantidadeVenda`, `valorVenda`, `Produto_codPro`) VALUES (1, 109.99, 5);
+
+COMMIT;
 
 -- NotaVenda
-USE TrabBD7;
+START TRANSACTION;
+
+USE TrabBD7_Ex1;
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `ItemVenda_nroVenda`, `Cliente_codCliente`) VALUES (1, '2021-10-20', 1, 1);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `ItemVenda_nroVenda`, `Cliente_codCliente`) VALUES (2, '2021-07-17', 2, 2);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `ItemVenda_nroVenda`, `Cliente_codCliente`) VALUES (3, '2021-04-01', 3, 3);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `ItemVenda_nroVenda`, `Cliente_codCliente`) VALUES (4, '2020-02-20', 4, 4);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `ItemVenda_nroVenda`, `Cliente_codCliente`) VALUES (5, '2020-06-10', 5, 5);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `ItemVenda_nroVenda`, `Cliente_codCliente`) VALUES (6, '2021-03-24', 6, 1);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `ItemVenda_nroVenda`, `Cliente_codCliente`) VALUES (7, '2020-11-25', 7, 2);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `ItemVenda_nroVenda`, `Cliente_codCliente`) VALUES (8, '2021-12-03', 8, 3);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `ItemVenda_nroVenda`, `Cliente_codCliente`) VALUES (9, '2021-05-17', 9, 4);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `ItemVenda_nroVenda`, `Cliente_codCliente`) VALUES (10, '2020-09-21', 10, 5);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `ItemVenda_nroVenda`, `Cliente_codCliente`) VALUES (11, '2021-06-24', 1, 1);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `ItemVenda_nroVenda`, `Cliente_codCliente`) VALUES (12, '2021-02-13', 2, 2);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `ItemVenda_nroVenda`, `Cliente_codCliente`) VALUES (13, '2021-02-13', 3, 3);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `ItemVenda_nroVenda`, `Cliente_codCliente`) VALUES (14, '2021-07-04', 4, 4);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `ItemVenda_nroVenda`, `Cliente_codCliente`) VALUES (15, '2021-11-13', 5, 5);
+
+
+COMMIT;
