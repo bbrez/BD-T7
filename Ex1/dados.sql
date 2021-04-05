@@ -23,20 +23,6 @@ INSERT INTO Produto (codPro, nomePro, precoVenda, precoCusto) VALUES (9, 'Azeite
 INSERT INTO Produto (codPro, nomePro, precoVenda, precoCusto) VALUES (10, 'Samsung Galaxy 21 Ultra', 6520.1, 5500);
 COMMIT;
 
--- NotaVenda
-START TRANSACTION;
-USE TrabBD7_Ex1;
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (1, '2021-10-20', 1);
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (2, '2021-07-17', 2);
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (3, '2021-04-01', 3);
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (4, '2020-02-20', 4);
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (5, '2020-06-10', 5);
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (7, '2020-11-25', 2);
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (8, '2021-12-03', 3);
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (9, '2021-02-13', 2);
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (10, '2021-02-13', 3);
-COMMIT;
-
 -- ItemCompra
 START TRANSACTION;
 USE TrabBD7_Ex1;
