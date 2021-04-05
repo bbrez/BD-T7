@@ -9,22 +9,19 @@ WHERE precoVenda > 100.0;
 
 -- C) Liste o codigo de todos os produtos que tenham registo de compra e venda
 
-SELECT itemcompra.codPro FROM itemcompra
-INNER JOIN itemvenda i on itemcompra.codPro = i.codPro
-WHERE i.codPro = itemcompra.codPro;
+SELECT Produto_codPro FROM ItemCompra INTERSECT SELECT Produto_codPro FROM ItemVenda;
 
 -- D) Liste o codigo de todos os produtos que não tem registo de venda ainda
 
-SELECT Produto.codPro FROM Produto
-LEFT OUTER JOIN itemvenda i on produto.codPro = i.codPro;
+(SELECT codPro FROM Produto) EXCEPT ALL (SELECT Produto_codPro FROM ItemVenda);
 
 -- E) Liste o codigo de todos os produtos que não tem nenhum registo de compra e venda
 
-SELECT codPro FROM Produto;
+SELECT codPro FROM Produto EXCEPT ALL (SELECT Produto_codPro FROM ItemCompra INTERSECT SELECT Produto_codPro FROM ItemVenda);
 
 -- F) Liste o nome de todos os clientes cadastrados
 
 SELECT nomeCliente FROM Cliente;
 
 -- Produto Cartesiano
-SELECT * FROM notaVenda, Cliente;
+SELECT * FROM NotaVenda, Cliente;
