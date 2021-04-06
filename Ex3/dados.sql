@@ -42,7 +42,7 @@ START TRANSACTION;
 
 USE `TrabBD7_Ex3`;
 INSERT INTO `NotaCompra` (`nroCompra`, `dataCompra`, `totalNota`) VALUES (1, '2020-10-01', 36910);
-INSERT INTO `NotaCompra` (`nroCompra`, `dataCompra`, `totalNota`) VALUES (2, '2020-03-20', 575968);
+INSERT INTO `NotaCompra` (`nroCompra`, `dataCompra`, `totalNota`) VALUES (2, '2021-03-20', 575968);
 INSERT INTO `NotaCompra` (`nroCompra`, `dataCompra`, `totalNota`) VALUES (3, '2021-06-12', 65979);
 INSERT INTO `NotaCompra` (`nroCompra`, `dataCompra`, `totalNota`) VALUES (4, '2021-04-25', 27570);
 INSERT INTO `NotaCompra` (`nroCompra`, `dataCompra`, `totalNota`) VALUES (5, '2021-04-25', 8970);
@@ -75,7 +75,7 @@ START TRANSACTION;
 USE TrabBD7_Ex3;
 INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `totalVenda`, `Cliente_codCliente`) VALUES (1, '2021-10-20', 95.88, 1);
 INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `totalVenda`, `Cliente_codCliente`) VALUES (2, '2021-07-17', 34.45, 2);
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `totalVenda`, `Cliente_codCliente`) VALUES (3, '2021-04-01', 249.98, 3);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `totalVenda`, `Cliente_codCliente`) VALUES (3, '2021-03-01', 249.98, 3);
 INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `totalVenda`, `Cliente_codCliente`) VALUES (4, '2020-02-20', 604.52, 4);
 INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `totalVenda`, `Cliente_codCliente`) VALUES (5, '2020-06-10', 329.97, 5);
 INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `totalVenda`, `Cliente_codCliente`) VALUES (6, '2021-03-24', 19.95, 1);
