@@ -27,25 +27,37 @@ INSERT INTO Produto (codPro, nomePro, precoVenda, precoCusto) VALUES (10, 'Samsu
 
 COMMIT;
 
+-- NotaCompra
+START TRANSACTION;
+
+USE `TrabBD7_Ex2`;
+INSERT INTO `NotaCompra` (`nroCompra`, `dataCompra`, `totalNota`) VALUES (1, '2020-10-01', 36910);
+INSERT INTO `NotaCompra` (`nroCompra`, `dataCompra`, `totalNota`) VALUES (2, '2020-03-20', 575968);
+INSERT INTO `NotaCompra` (`nroCompra`, `dataCompra`, `totalNota`) VALUES (3, '2021-06-12', 65979);
+INSERT INTO `NotaCompra` (`nroCompra`, `dataCompra`, `totalNota`) VALUES (4, '2021-04-25', 27570);
+INSERT INTO `NotaCompra` (`nroCompra`, `dataCompra`, `totalNota`) VALUES (5, '2021-04-25', 8970);
+
+COMMIT;
+
 -- ItemCompra
 START TRANSACTION;
 
 USE TrabBD7_Ex2;
-INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (2000, 9980, 2);
-INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (5000, 14950, 7);
-INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (2000, 11980, 1);
-INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (100, 550000, 10);
-INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (200, 19998, 3);
-INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (3000, 5970, 6);
-INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (500, 49395, 5);
-INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (1000, 3990, 8);
-INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (600, 12594, 9);
-INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (1000, 16590, 4);
-INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (1000, 5990, 1);
-INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (1000, 4990, 2);
-INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (1000, 1990, 6);
-INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (1000, 2990, 7);
-INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (1000, 3990, 8);
+INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (2000, 9980, 2, 1);
+INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (5000, 14950, 7, 1);
+INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (2000, 11980, 1, 1);
+INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (100, 550000, 10, 2);
+INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (200, 19998, 3, 2);
+INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (3000, 5970, 6, 2);
+INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (500, 49395, 5, 3);
+INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (1000, 3990, 8, 3);
+INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (600, 12594, 9, 3);
+INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (1000, 16590, 4, 4);
+INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (1000, 5990, 1, 4);
+INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (1000, 4990, 2, 4);
+INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (1000, 1990, 6, 5);
+INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (1000, 2990, 7, 5);
+INSERT INTO `ItemCompra` (`qtdeCompra`, `valorCompra`, `Produto_codPro`, `NotaCompra_nroCompra`) VALUES (1000, 3990, 8, 5);
 COMMIT;
 
 -- ItemVenda
@@ -75,16 +87,16 @@ COMMIT;
 START TRANSACTION;
 
 USE TrabBD7_Ex2;
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (1, '2021-10-20', 1);
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (2, '2021-07-17', 2);
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (3, '2021-04-01', 3);
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (4, '2020-02-20', 4);
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (5, '2020-06-10', 5);
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (6, '2021-03-24', 1);
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (7, '2020-11-25', 2);
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (8, '2021-12-03', 3);
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (9, '2021-02-13', 2);
-INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `Cliente_codCliente`) VALUES (10, '2021-02-13', 3);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `totalVenda`, `Cliente_codCliente`) VALUES (1, '2021-10-20', 95.88, 1);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `totalVenda`, `Cliente_codCliente`) VALUES (2, '2021-07-17', 34.45, 2);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `totalVenda`, `Cliente_codCliente`) VALUES (3, '2021-04-01', 249.98, 3);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `totalVenda`, `Cliente_codCliente`) VALUES (4, '2020-02-20', 604.52, 4);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `totalVenda`, `Cliente_codCliente`) VALUES (5, '2020-06-10', 329.97, 5);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `totalVenda`, `Cliente_codCliente`) VALUES (6, '2021-03-24', 19.95, 1);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `totalVenda`, `Cliente_codCliente`) VALUES (7, '2020-11-25', 49.9, 2);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `totalVenda`, `Cliente_codCliente`) VALUES (8, '2021-12-03', 13.98, 3);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `totalVenda`, `Cliente_codCliente`) VALUES (9, '2021-02-13', 25.99, 2);
+INSERT INTO `NotaVenda` (`nroVenda`, `dataVenda`, `totalVenda`, `Cliente_codCliente`) VALUES (10,'2021-02-13', 5500, 3);
 
 
 COMMIT;

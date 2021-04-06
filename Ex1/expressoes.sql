@@ -25,3 +25,6 @@ SELECT nomeCliente FROM Cliente;
 
 -- Produto Cartesiano
 SELECT * FROM NotaVenda, Cliente;
+
+
+SELECT DISTINCT Produto_codPro FROM ItemCompra INNER JOIN ItemVenda USING (Produto_codPro);
