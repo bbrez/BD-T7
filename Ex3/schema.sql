@@ -1,6 +1,6 @@
-DROP SCHEMA IF EXISTS TrabBD7_Ex2;
-CREATE SCHEMA IF NOT EXISTS TrabBD7_Ex2;
-USE TrabBD7_Ex2;
+DROP SCHEMA IF EXISTS TrabBD7_Ex3;
+CREATE SCHEMA IF NOT EXISTS TrabBD7_Ex3;
+USE TrabBD7_Ex3;
 
 DROP TABLE IF EXISTS Profissao;
 CREATE TABLE IF NOT EXISTS Profissao (
@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS Cliente;
 CREATE TABLE IF NOT EXISTS Cliente (
     `codCliente` INT NOT NULL AUTO_INCREMENT,
     `nomeCliente` VARCHAR(45),
-    `Profissao_idProfissao` INT NOT NULL,
+    `Profissao_idProfissao` INT,
     PRIMARY KEY (`codCliente`),
     FOREIGN KEY (`Profissao_idProfissao`) REFERENCES `Profissao`(`idProfissao`)
 );
